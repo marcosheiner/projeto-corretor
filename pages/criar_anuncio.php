@@ -4,8 +4,8 @@
    if (isset($_SESSION['nome_usuario']) && isset($_SESSION['id'])) {   ?>
 
 <?php include_once '../includes/menudashboard.php'; ?>
-
-    <div class="container" style="margin-top: 3em; margin-bottom: 3em;">
+<main role="main" class="mt-4 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+    <div class="container-fluid">
         <div class="area_cont">
             <h1 class="h4 mb-3">Criar Anúncio</h1>
             <hr class="linha-black">
@@ -149,6 +149,7 @@
             </div>
         </div>
     </div>
+</main>
 
     
 

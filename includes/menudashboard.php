@@ -22,7 +22,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav me-auto">
-                        <a class="nav-link" href="../pages/dashboard.php"><i class="fas fa-tachometer-alt"></i></a>
+                        <a class="nav-link" href="../pages/dashboard.php">Logo</a>
                     </div>
                     <div class="navbar-nav ml-auto">
                         <a class="nav-link" href="../routes/logout.php">Sair</a>
@@ -30,3 +30,95 @@
                 </div>
             </div>
         </nav>
+
+        <!--Dashboard-->
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse shadow-lg">
+                    <div class="sidebar-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/dashboard.php">
+                                <span class="float-right"><i class="fas fa-tachometer-alt"></i></span>
+                                Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/criar_anuncio.php">
+                                <span style="float: right;"><i class="fas fa-home dash-icons"></i></span>
+                                Criar Anúnico
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                <span style="float: right;"><i class="fas fa-edit dash-icons"></i></span>
+                                Editar Meus Anúncios
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/painel.php">
+                                <span style="float: right;"><i class="fas fa-columns dash-icons"></i></span>
+                                Acessar Painel
+                                </a>
+                            </li>
+                        </ul>
+
+                        
+
+                        <?php if ($_SESSION['funcao'] == 'admin') { ?>
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span>Membros</span>
+                                <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                                    <span data-feather="plus-circle"></span>
+                                </a>
+                            </h6>
+                            <ul class="nav flex-column mb-2">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/usuarios.php">
+                                    <span style="float: right;"><i class="fas fa-user dash-icons"></i></span>
+                                    Usuários
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                    <span style="float: right;"><i class="fas fa-cog dash-icons"></i></span>
+                                    Configurar Usuários
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/cad_usuario.php">
+                                    <span style="float: right;"><i class="fas fa-registered dash-icons"></i></span>
+                                    Cadastrar Usuários
+                                    </a>
+                                </li>
+                            </ul>
+                        <?php } ?>
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Configurações</span>
+                            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                                <span data-feather="plus-circle"></span>
+                            </a>
+                        </h6>
+                        <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/perfil.php">
+                                <span style="float: right;"><i class="fas fa-user-circle dash-icons"></i></span>
+                                Perfil
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                <span style="float: right;"><i class="fas fa-bell dash-icons"></i></span>
+                                Atualizações 
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                <span style="float: right;"><i class="fas fa-user-shield dash-icons"></i></span>
+                                Suporte
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>

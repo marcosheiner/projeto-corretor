@@ -21,76 +21,40 @@
     $num_user = $query_values_user['total_user'];
 ?>
 
-    <?php if ($_SESSION['funcao'] == 'admin') {?>
-
-        <div class="container" style="margin-top: 3em;">
-            <div>
-                <h4 style="font-weight: 300;">Olá <span class="username-dashboard"><?php echo $_SESSION['nome_usuario']; ?></span></h4>
-                <small class="badge bg-web"><i class="fas fa-user"></i> <?php echo $_SESSION['funcao']; ?></small>
-                
-            </div>
-
-            <br>
-            <div class="row">
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <div class="area-dashboard">
-                        <h1 class="h4 mb-3">Dashboard</h1>
-
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-home dash-icons"></i></span><a class="link-dash-a" href="../pages/criar_anuncio.php">Criar Anúncio </a></div>
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-edit dash-icons"></i></span><a class="link-dash-a" href="../pages/criar_anuncio.php">Editar Meus Anúncios</a></div>
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-columns dash-icons"></i></span><a class="link-dash-a" href="../pages/painel.php">Acessar Painel</a></div>
-                    </div>
-
-                    <div class="area-dashboard">
-                        <h1 class="h4 mb-3">Membros</h1>
-
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-users dash-icons"></i></span><a class="link-dash-a" href="../pages/usuarios.php">Usuários</a></div>
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-cog dash-icons"></i></span><a class="link-dash-a" href="">Configurar Usuários</a></div>
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-registered dash-icons"></i></span><a class="link-dash-a" href="../pages/cad_usuario.php">Cadastrar Usuário</a></div>
-                        
-                    </div>
-
-                    <div class="area-dashboard">
-                        <h1 class="h4 mb-3">Configurações</h1>
-
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-user-circle dash-icons"></i></span><a class="link-dash-a" href="../pages/perfil.php">Perfil</a></div>
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-user-shield dash-icons"></i></span><a class="link-dash-a" href="">Suporte</a></div>
-                        <div class="link-dash mb-3"><span style="float: right;"><i class="fas fa-bell dash-icons"></i></span><a class="link-dash-a" href="">Atualizações</a></div>
-                        
-                        
-                    </div>
-                    
-                </div>
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <h1 class="h4 mb-3">Overview</h1>
-                    <div class="card-dashboard shadow-lg">
-                        <div class="card-area">
-                            <h1 class="font-weight-bold mb-3"><?php echo $num_anun ?></h1>
-                            <span style="float: right;"><i class="fas fa-home"></i></span>
-                            <p>Total De Anúncios</p>
-                        </div> 
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6 mb-4">
-                    <h1 class="h4 mb-3"><i class="fas fa-users"></i></h1>
-                    <div class="card-dashboard shadow-lg">
-                        <div class="card-area">
-                            <h1 class="font-weight-bold mb-3"><?php echo $num_user ?></h1>
-                            <span style="float: right;"><i class="fas fa-users-cog"></i></span>
-                            <p>Funcionários Cadastrados</p>
-                        </div> 
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
     
-    <?php }else { header("Location: ../pages/funcionario.php"); ?>
-      		<!-- FORE USERS -->
-      		
-    <?php } ?>
+                <main role="main" class="mt-3 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                    <div class="container-fluid">
+                        <div class="mb-3" style="text-transform: capitalize; color: green;"><span class=""><?php echo $_SESSION['funcao']; ?></span></div>
+                        <!--conteudo da página-->
+                    
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6 mb-4">
+                                <h1 class="h4 mb-3">Overview</h1>
+                                <div class="card-dashboard shadow-lg">
+                                    <div class="card-area">
+                                        <h1 class="font-weight-bold mb-3"><?php echo $num_anun ?></h1>
+                                        <span style="float: right;"><i class="fas fa-home"></i></span>
+                                        <p>Total De Anúncios</p>
+                                    </div> 
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-md-6 mb-4">
+                                <h1 class="h4 mb-3"><i class="fas fa-users"></i></h1>
+                                <div class="card-dashboard shadow-lg">
+                                    <div class="card-area">
+                                        <h1 class="font-weight-bold mb-3"><?php echo $num_user ?></h1>
+                                        <span style="float: right;"><i class="fas fa-users-cog"></i></span>
+                                        <p>Funcionários Cadastrados</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div><!--ROW-->
+        </div><!--container-->
+
 
 <?php include_once '../includes/footer.php'; ?>
 

@@ -7,6 +7,8 @@
 
 body{
     background-color: #f5f5fd;
+    margin: 0;
+    font-size: .875rem;
 }
 
 p{
@@ -45,7 +47,8 @@ label{
 /*menu*/
 .navbar{
     font-weight: 300;
-    background-color: transparent;
+    background-color: #fff;
+    z-index: 1000;
     
 }
 
@@ -57,11 +60,12 @@ label{
     padding-left: 15px;
     font-weight: 700;
 }
-.nav-link:hover{
-    color: #18181b;
+
+.nav-item:hover{
     background-color: #fff;
-    border-radius: 15px;
 }
+
+
 
 /*footer*/
 .footer{
@@ -69,8 +73,76 @@ label{
     color: white;
 }
 
+/*nova dashboard*/
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+  
+  /*
+   * Sidebar
+   */
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+  }
+  
+  @media (max-width: 767.98px) {
+    .sidebar {
+      top: 5rem;
+    }
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+  
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+  }
+  
+  .sidebar .nav-link.active {
+    color: #007bff;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+  
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
 
-/*dashboard*/
+
+/*old dashboard*/
+
+
 .area-dashboard{
     color: black;
 }
@@ -91,6 +163,7 @@ label{
 .username-dashboard{
     text-transform: capitalize;
     color: black;
+    font-weight: 700;
 }
 
 .link-dash{

@@ -14,8 +14,8 @@
     $result_anun = $conn->query($sel_anun_database) or die($conn->error);
 
     ?>
-
-    <div class="container" style="margin-top: 3em;">
+<main role="main" class="mt-4 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+    <div class="container-fluid" >
 
         <h1 class="h4 mb-3">Painel</h1>
         <hr class="linha-black">
@@ -56,7 +56,7 @@
         <?php } ?>
         
    </div>
-
+</main>
 
 <?php include_once '../includes/footer.php'; ?>
 

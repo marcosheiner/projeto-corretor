@@ -7,7 +7,9 @@
 
 <?php include_once '../includes/menudashboard.php'; ?>
 
-        <div class="container" style="margin-top: 3em;">
+<main role="main" class="mt-4 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+
+        <div class="container-fluid">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../pages/perfil.php">Voltar</a></li>
@@ -99,7 +101,7 @@
             </div>
         </div><!--container-->
 
-        
+</main>     
     
 
 <?php include_once '../includes/footer.php'; ?>
