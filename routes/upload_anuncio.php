@@ -26,11 +26,11 @@
             $new_query = mysqli_query($conn, $query);
             
             if (mysqli_affected_rows($conn) != 0) {
-                $_SESSION['cad_sucesso'] = 'Anúncio Feito!';
+                $_SESSION['cad_sucesso'] = 'Anúncio Feito! Acesse o <b>Painel</b> ou o seu <b>Perfil</b> para visualizá-lo.';
                 header("Location: ../pages/criar_anuncio.php");
 
             }else{
-                $_SESSION['cad_err'] = 'Não foi possivel realizar o Anúncio!';
+                $_SESSION['cad_err'] = 'Não foi possivel realizar o Anúncio! Tente novamente.';
                 header("Location: ../pages/criar_anuncio.php");
 
             }
