@@ -101,8 +101,8 @@
 
                     <div class="row">
                         <div class="col-sm">
-                            <label>Foto da Fachada:</label>
-                            <input type="file" name="ftfachada" class="form-control-file" multiple required>
+                            <label>Foto dos Cômodos:</label>
+                            <input type="file" name="ftcomodos[]" class="form-control-file" multiple required>
                         </div>
                         <!--<div class="col-sm">
                             <label>Foto dos Cômodos:</label>
@@ -141,7 +141,7 @@
 
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
-                            <button type="submit" name="salvar_anuncio" class="w-100 btn btn-anunciar btn-lg">Anunciar</button>
+                            <button type="submit" name="cadastrar_anuncio" class="w-100 btn btn-anunciar btn-lg">Anunciar</button>
                         </div>
                     </div>
 

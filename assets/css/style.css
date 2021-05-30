@@ -390,3 +390,29 @@ label{
     border-radius: 10px;
     padding: 1em;
 }
+
+/*area anuncio*/
+.area-cont-anuncio{
+    background-color: white;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+.btn-wpp{
+    background-color: #25d366;
+    color: white;
+    border-radius: 10px;
+    font-weight: 300;
+}
+.btn-wpp:hover{
+    color: whitesmoke;
+    background-color: #1fb456;
+}
+
+.btn-telefone{
+    background-color: #f5f5fd;
+    border-radius: 10px;
+}
+.btn-telefone:hover{
+    cursor: default!important;
+}

@@ -33,7 +33,7 @@
                 <?php while($dados_anun = $result_anun->fetch_array()){ ?>
                     <div class="col-xl-4 col-md-6 mb-4">  
                         <div class="area-card-painel">
-                            <div class="card card-anun shadow" style="width: 20rem;">
+                            <div class="card card-anun shadow" style="width: 18rem;">
                                 <img src="https://i.pinimg.com/564x/70/75/ec/7075ece597ec66bb315b3ab8bea0ed80.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <span class="badge float-right"><?php echo $dados_anun["visibilidade"]; ?></span>
