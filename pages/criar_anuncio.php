@@ -4,7 +4,8 @@
    if (isset($_SESSION['nome_usuario']) && isset($_SESSION['id'])) {   ?>
 
 <?php include_once '../includes/menudashboard.php'; ?>
-<main role="main" class="mt-4 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<main role="main" class="mt-5 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<br>
     <div class="container-fluid">
         <div class="area_cont">
             <h1 class="h4 mb-3">Criar Anúncio</h1>
@@ -36,6 +37,18 @@
                 <?php 
                 endif; 
                 unset($_SESSION['cad_err']);
+                ?>
+
+                <?php if (isset($_SESSION['extensao_err'])): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?=$_SESSION['extensao_err'];?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php 
+                endif; 
+                unset($_SESSION['extensao_err']);
                 ?>
                     
                     <div class="row">

@@ -9,7 +9,8 @@
 
 
     <?php if ($_SESSION['funcao'] == 'admin') {?>
-        <main role="main" class="mt-4 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <main role="main" class="mt-5 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <br>
             <div class="container-fluid">
                 <h1 class="h4 mb-3">Cadastrar Funcionário</h1>
                 <hr class="linha-black">

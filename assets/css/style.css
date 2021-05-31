@@ -403,6 +403,7 @@ label{
     color: white;
     border-radius: 10px;
     font-weight: 300;
+    font-size: 16px;
 }
 .btn-wpp:hover{
     color: whitesmoke;
@@ -412,7 +413,19 @@ label{
 .btn-telefone{
     background-color: #f5f5fd;
     border-radius: 10px;
+    font-size: 16px;
 }
 .btn-telefone:hover{
     cursor: default!important;
+}
+
+.area-fachada{
+    max-width: 100%;
+}
+.img-fachada{
+    max-width: 100%;
+    border-radius: 10px;
+}
+.img-comodo{
+    border-radius: 10px;
 }

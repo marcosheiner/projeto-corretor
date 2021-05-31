@@ -22,7 +22,8 @@
 ?>
 
     
-                <main role="main" class="mt-3 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <main role="main" class="mt-5 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <br>
                     <div class="container-fluid">
                         <div class="mb-3" style="text-transform: capitalize; color: green;"><span class=""><?php echo $_SESSION['funcao']; ?></span></div>
                         <!--conteudo da página-->

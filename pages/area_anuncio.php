@@ -14,7 +14,8 @@
     $result_anun = $conn->query($sel_anun_database) or die($conn->error);
 
     ?>
-<main role="main" class="mt-4 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<main role="main" class="mt-5 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<br>
     <div class="container-fluid" >
 
         <?php if (mysqli_affected_rows($conn) <= 0) { ?>
@@ -29,7 +30,7 @@
 
             <div class="row">
                 <div class="col-xl-6 col-md-6 mb-4">
-                    <div class="area-cont-anuncio shadow-lg">
+                    <div class="area-cont-anuncio mb-3">
                         <h1 class="h4">Casa</h1>
                         <hr>
                         <!--DADOS DO IMÓVEL-->
@@ -63,10 +64,36 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-5 col-md-6 mb-4">
+
                     <div class="area-cont-anuncio">
-                        <h1 class="h5">Foto dos Cômodos</h1>
+                        <span class="float-right"><i class="fas fa-dollar-sign"></i></span>
+                        <h1 class="h4">Sobre o Imóvel</h1>
+                        <hr>
+                        <p class="float-right"><strong>Valor negociável:</strong> Sim</p>
+                        <p class="h5"><strong>Valor:</strong> R$ 10.000,00</p>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 mb-4">
+                    <div class="area-cont-anuncio mb-3">
+                        <span class="float-right"><i class="fas fa-image"></i></span>
+                        <h1 class="h5">Fachada</h1>
+                        <hr>
+                        <div class="area-fachada">
+                            <img src="../assets/img/perfil/capa.jpeg" alt="Imagem da fachada" class="img-fachada">
+                        </div>
+                    </div>
+
+                    <div class="area-cont-anuncio">
+                        <span class="float-right"><i class="fas fa-images"></i></span>
+                        <h1 class="h5">Cômodos</h1>
+                        <hr>
+                        <div class="fotorama" data-allowfullscreen="native" data-autoplay="true" style="border-radius: 10px;">
+                            <img class="img-comodo" src="https://i.pinimg.com/736x/48/54/58/48545831887c996201cc8e639ba81c8a.jpg" alt="">
+                            <img class="img-comodo" src="https://i.pinimg.com/564x/e1/83/71/e183718105cc704115bb48dc3b0706e6.jpg" alt="">
+                            <img class="img-comodo" src="https://i.pinimg.com/564x/42/f2/98/42f29801282e58b4484f2a5669e60d0f.jpg" alt="">
+                            <img class="img-comodo" src="https://i.pinimg.com/736x/48/54/58/48545831887c996201cc8e639ba81c8a.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
