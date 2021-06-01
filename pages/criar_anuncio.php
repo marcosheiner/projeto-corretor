@@ -111,16 +111,16 @@
                     </div>
 
                     <br>
-
+                    <hr>
                     <div class="row">
+                        <div class="col-sm">
+                            <label>Foto da Fachada:</label>
+                            <input type="file" name="ftfachada[]" class="form-control-file" required>
+                        </div>
                         <div class="col-sm">
                             <label>Foto dos Cômodos:</label>
                             <input type="file" name="ftcomodos[]" class="form-control-file" multiple required>
                         </div>
-                        <!--<div class="col-sm">
-                            <label>Foto dos Cômodos:</label>
-                            <input type="file" name="ftcomodos[]" class="form-control-file" multiple required>
-                        </div>-->
                     </div>
                     <br>
                     <div class="row">

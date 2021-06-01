@@ -36,7 +36,7 @@
 
         <div class="row">
             <div class="col-xl-4 col-md-6 mb-4">
-                <div class="area-perfil shadow-lg">
+                <div class="area-perfil">
                     <div class="area-foto">
                        <img src="../assets/img/perfil/perfil.png" alt="imagem de perfil" class="foto-perfil"> 
                     </div>
@@ -71,9 +71,9 @@
                 </div>
             </div>
             <div class="col-xl-8 col-md-6 mb-4">
-                <div class="area-capa mb-3">
+                <!--<div class="area-capa mb-3">
                     <h1 class="h3 mb-3"></h1>
-                </div>
+                </div>-->
 
                 <?php
                     //pegar todos os anuncios feitos
