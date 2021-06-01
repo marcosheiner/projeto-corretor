@@ -13,7 +13,6 @@
         //variaveis da foto de fachada
         $image_file_fachada = '';
         $image_tmp_fachada = '';
-        $image_fachada_location = '../assets/img/update_foto_fachada';
         $image_data_fachada = '';
         
         //variaveis padrão do formulário
@@ -53,6 +52,15 @@
                 header("Location: ../pages/criar_anuncio.php");
             }*/
 
+            $image_fachada_name = $_FILES['ftfachada']['name'];
+            $image_fachada_type = $_FILES['ftfachada']['type'];
+            $image_fachada_size = $_FILES['ftfachada']['size'];
+            $image_fachada_tmp = $_FILES['ftfachada']['tmp_name'];
+            $image_fachada_location = "../assets/img/update_foto_fachada/";
+            $extensao = pathinfo($image_fachada_name, PATHINFO_EXTENSION);
+
+            
+
             //codigo para o upload das fotos dos cômodos
             foreach($_FILES['ftcomodos']['name'] as $key_image=>$val_image){
                 $images_file = $_FILES['ftcomodos']['name'][$key_image];
@@ -68,12 +76,18 @@
                 //criar novo nome para as fotos dos cômodos
                 $images_file = str_replace('.', '-', basename($images_file, $extensao));
                 $new_images_file = $images_file.time()."-".$id_user_anun.".".$extensao;
-
-            
-
                 //mover as fotos dos comodos para a pasta interna do projeto
                 move_uploaded_file($images_file_tmp, $images_location.$new_images_file);
                 $image_data_comodos .= $new_images_file." ";
+
+
+
+                //mover fotos fachada
+                $image_fachada_name = str_replace('.', '-', basename($image_fachada_name, $extensao));
+                $new_image_fachada_name = $image_fachada_name.time()."-".$id_user_anun.".".$extensao;
+                move_uploaded_file($image_fachada_tmp, $image_fachada_location.$new_image_fachada_name);
+                $image_data_fachada .= $new_image_fachada_name." "; 
+                
 
                 //inserir dados do form para o banco
                 $query = "INSERT INTO criar_anuncio (nome_funcionario, tipo_anuncio, cidade, cep, endereco, numero_casa, bairro, visibilidade, telefone, wpp, foto_fachada, fotos_comodos, valor, valor_neg, qtd_comodos, id_user_anun, data_cadastro) VALUES ('$post_funcionario', '$tipo_anuncio', '$cidade', '$cep', '$endereco', '$num_casa', '$bairro', '$visibilidade', '$telefone', '$wpp', '$image_data_fachada', '$image_data_comodos', '$valor', '$valor_neg', '$qtd_comodos', '$id_user_anun', NOW())";

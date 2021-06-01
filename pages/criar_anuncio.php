@@ -115,7 +115,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <label>Foto da Fachada:</label>
-                            <input type="file" name="ftfachada[]" class="form-control-file" required>
+                            <input type="file" name="ftfachada" class="form-control-file" required>
                         </div>
                         <div class="col-sm">
                             <label>Foto dos Cômodos:</label>
