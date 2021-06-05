@@ -23,7 +23,6 @@
                 <h1 class="h4 mb-3">Lista de Usuários</h1>
 
                 <div class="">
-                    <hr class="linha-black">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control mr-1 form-control-lg border-0" placeholder="Buscar Usuário">
                         <span class="input-group-btn">

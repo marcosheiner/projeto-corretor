@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="area_cont">
             <h1 class="h4 mb-3">Criar Anúncio</h1>
-            <hr class="linha-black">
+            
             
             <!--form-->
             <div class="back-forms">

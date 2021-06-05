@@ -19,7 +19,8 @@
     <div class="container-fluid" >
 
         <h1 class="h4 mb-3">Painel</h1>
-        <hr class="linha-black">
+        
+        
         <?php if (mysqli_affected_rows($conn) <= 0) { ?>
 
             <div class="alert">

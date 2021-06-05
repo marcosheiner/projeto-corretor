@@ -3,24 +3,7 @@
    include "../config/conn.php";
    if (isset($_SESSION['nome_usuario']) && isset($_SESSION['id'])) {   ?>
 
-
-
-<?php include_once '../includes/menudashboard.php'; ?>
-
-<main role="main" class="mt-5 col-md-9 ml-sm-auto col-lg-10 px-md-4">
-<br>
-
-        <div class="container-fluid">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../pages/perfil.php">Voltar</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Redefinir Senha</li>
-                </ol>
-            </nav>
-            <h1 class="h4 mb-3">Redefinir Senha</h1>
-            <hr class="linha-black">
-
-            <?php
+<?php
             // Define variaveis e inicializa com valores vazios
             $new_password = $confirm_password = '';
             $new_password_err = $confirm_password_err = '';
@@ -76,6 +59,23 @@
                 }
             }
             ?>
+
+<?php include_once '../includes/menudashboard.php'; ?>
+
+<main role="main" class="mt-5 col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<br>
+
+        <div class="container-fluid">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../pages/perfil.php">Voltar</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Redefinir Senha</li>
+                </ol>
+            </nav>
+            <h1 class="h4 mb-3">Redefinir Senha</h1>
+            <hr class="linha-black">
+
+            
  
 
             <div class="row">
@@ -108,5 +108,5 @@
 <?php include_once '../includes/footer.php'; ?>
 
 <?php }else{
-	header("Location: ../pages/area_login.php");
+	
 } ?>

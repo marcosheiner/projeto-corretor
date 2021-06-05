@@ -13,7 +13,6 @@
         <br>
             <div class="container-fluid">
                 <h1 class="h4 mb-3">Cadastrar Funcionário</h1>
-                <hr class="linha-black">
 
                 <div>
                     <div class="background-form-cad shadow-lg">
