@@ -35,8 +35,10 @@
                 <?php while($dados_anun = $result_anun->fetch_array()){ ?>
                     <div class="col-xl-4 col-md-6 mb-4">  
                         <div class="area-card-painel">
-                            <div class="card card-anun shadow" style="width: 18rem;">
-                                <img src="https://i.pinimg.com/564x/70/75/ec/7075ece597ec66bb315b3ab8bea0ed80.jpg" class="card-img-top" alt="...">
+
+                            <div class="card card-anun shadow-sm" style="width: 18rem;">
+                                <img src="<?php echo "../assets/img/update_foto_fachada/".$dados_anun["foto_fachada"];?>" class="card-img-top" alt="foto fachada">
+
                                 <div class="card-body">
                                     <span class="badge float-right"><?php echo $dados_anun["visibilidade"]; ?></span>
                                     <h5 class="card-title"><?php echo $dados_anun["tipo_anuncio"]; ?></h5>
@@ -48,7 +50,7 @@
                                         <span style="float: right;"><i class="fas fa-map-marker-alt"></i></span>
                                         <p class="card-text mb-3"><?php echo $dados_anun["bairro"]; ?></p>
                                     </div>
-                                    <a href="#" class="w-100 btn-lg btn btn-card">Detalhes</a>
+                                    <a href="../pages/area_anuncio.php?open_anuncio=<?php echo $dados_anun["id"];?>" class="w-100 btn-lg btn btn-card">Detalhes</a>
                                 </div>
                             </div> 
                         </div>

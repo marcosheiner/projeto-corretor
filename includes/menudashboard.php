@@ -53,9 +53,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+
+                                <a class="nav-link" href="../pages/meus_anuncios.php">
                                 <span style="float: right;"><i class="fas fa-edit dash-icons"></i></span>
-                                Editar Meus Anúncios
+                                Meus Anúncios
+
+
                                 </a>
                             </li>
                             <li class="nav-item">

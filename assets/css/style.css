@@ -294,7 +294,8 @@ label{
 }
 
 .card-meus-anuncios{
-    background-color: #f5f5fd;
+    border-color: #555;
+
     border-radius: 10px;
     border: none;
 }
@@ -304,6 +305,16 @@ label{
     color: black;
     border: 0;
 }
+
+
+.img-meus-anuncios{
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 
 
 /*usuario page*/
@@ -339,6 +350,22 @@ label{
     background-color: #18181b;
     color: whitesmoke;
 }
+
+.btn-editar{
+    border-color: #0e0e10;
+    color: black;
+    font-weight: 400;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.btn-deletar{
+    border-color: #0e0e10;
+    color: black;
+    font-weight: 400;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
 .card-anun{
     background-color: #fff;
     border-radius: 20px;
@@ -423,6 +450,10 @@ label{
 }
 .img-fachada{
     max-width: 100%;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+
     border-radius: 10px;
 }
 .img-comodo{

@@ -57,9 +57,10 @@
                         <p class="bio mb-3"><?php echo $_SESSION['funcao']; ?></p>
                             
                         <span style="float: right;"><i class="fas fa-key"></i> </span>
-                        <p class="bio mb-3">Código: <span class="badge badge-warning"><?php echo $_SESSION['id']; ?></span></p>
-                           
 
+                        <p class="bio mb-3">Código: <span class="badge badge-dark"><?php echo $_SESSION['id']; ?></span></p>
+        
+                        
                         <span style="float: right;"><i class="fas fa-clock"></i> </span>
                         <p class="bio mb-3">Iniciou: <?php echo date("d/m/Y", strtotime($_SESSION['data_cadastro'])); ?></p>
                     </div>
@@ -89,7 +90,10 @@
                         <?php while($dados_anun = $result_anun->fetch_array()){ ?>
                             <div class="row">
                                 <div class="col-sm mb-3">
+                                    <div class="w-100 card card-meus-anuncios border">
+
                                     <div class="w-100 card card-meus-anuncios">
+
                                         <div class="card-body">
                                             <span class="float-right">
                                                 <div class="dropdown">
@@ -104,7 +108,9 @@
                                                 </div>
                                             </span>
                                             <h5 class="card-title mb-4"><?php echo $dados_anun["tipo_anuncio"]; ?></h5>
-                                            <hr>
+
+                                            <img src="<?php echo "../assets/img/update_foto_fachada/".$dados_anun["foto_fachada"];?>" class="img-meus-anuncios mb-3" alt="foto fachada">
+
                                             <div class="">
                                                 <span style="float: right;"><i class="fas fa-map-marked-alt"></i></span>
                                                 <p class="card-text mb-2"><span class="infor-card"><?php echo $dados_anun["cidade"]; ?></span></p>
@@ -113,7 +119,10 @@
                                                 <span style="float: right;"><i class="fas fa-map-marker-alt"></i></span>
                                                 <p class="card-text mb-3"><span><?php echo $dados_anun["bairro"]; ?></span></p>
                                             </div>
-                                            <a href="#" class="btn btn-card mb-3">Detalhes</a>
+
+                                            <a href="../pages/area_anuncio.php?open_anuncio=<?php echo $dados_anun["id"];?>" class="btn btn-card mb-3">Detalhes</a>
+
+
                                             <p class="card-text"><small class="text-muted">Data de Anúncio: <?php echo date("d/m/Y", strtotime($dados_anun['data_cadastro'])); ?></small></p>
                                         </div>
                                     </div>

@@ -8,6 +8,8 @@
 <br>
     <div class="container-fluid">
         <div class="area_cont">
+   
+
             <h1 class="h4 mb-3">Criar Anúncio</h1>
             
             
@@ -94,7 +96,10 @@
                             <label>Visibilidade:</label>
                             <select class="form-control disabled" name="visibilidade">
                                 <option value="Disponível" selected>Disponível</option>
+
+
                                 <option value="Indisponível">Indisponível</option>
+
                             </select>
                         </div>
                     </div>

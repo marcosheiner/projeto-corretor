@@ -4,10 +4,12 @@ require_once '../config/conn.php';
 
 if (isset($_POST['btn-atualizar'])) {
     
-    $nome_funcionario = trim($_POST['nome_funcionario']);
-    $email_user = trim($_POST['email_user']);
-    $telefone_user = $_POST['telefone_user'];
-    $funcao_user = $_POST['funcao_user'];
+
+    $nome_funcionario   = trim($_POST['nome_funcionario']);
+    $email_user         = trim($_POST['email_user']);
+    $telefone_user      = $_POST['telefone_user'];
+    $funcao_user        = $_POST['funcao_user'];
+
 
     $id_user_session = $_POST['id_user_session'];
 

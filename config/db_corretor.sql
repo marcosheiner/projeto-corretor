@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Jun-2021 às 20:46
+-- Tempo de geração: 07-Jun-2021 às 03:04
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.6
 
@@ -51,6 +51,19 @@ CREATE TABLE `criar_anuncio` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `img_comodos`
+--
+
+CREATE TABLE `img_comodos` (
+  `id` int(11) NOT NULL,
+  `id_user` int(255) NOT NULL,
+  `id_anuncio` int(255) NOT NULL,
+  `img_file` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `usuario`
 --
 
@@ -70,7 +83,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome_usuario`, `nome_funcionario`, `email_user`, `telefone_user`, `senha`, `funcao`, `data_cadastro`) VALUES
-(1, 'marcos', 'marcos heiner lopes brito', 'contato.marcosheiner@gmail.com', '(88) 98853-1646', 'e10adc3949ba59abbe56e057f20f883e', 'admin', '2021-05-25 17:49:40'),
+(1, 'marcos', 'marcos heiner lopes brito', 'marcosheiner@gmail.com', '(88) 98853-1646', 'e10adc3949ba59abbe56e057f20f883e', 'admin', '2021-05-25 17:49:40'),
 (3, 'marcosheiner', 'Marcos Heiner Lopes Brito', 'marcosheiner2000@gmail.com', '(22) 22222-2222', 'e10adc3949ba59abbe56e057f20f883e', 'funcionário', '2021-05-26 14:05:19');
 
 --
@@ -81,6 +94,12 @@ INSERT INTO `usuario` (`id`, `nome_usuario`, `nome_funcionario`, `email_user`, `
 -- Índices para tabela `criar_anuncio`
 --
 ALTER TABLE `criar_anuncio`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `img_comodos`
+--
+ALTER TABLE `img_comodos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -97,7 +116,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `criar_anuncio`
 --
 ALTER TABLE `criar_anuncio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT de tabela `img_comodos`
+--
+ALTER TABLE `img_comodos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
