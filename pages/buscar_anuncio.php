@@ -8,9 +8,22 @@
 <?php include_once '../includes/menudashboard.php'; ?>
 
     <?php 
+    //sistema de busca
+    //verifica se existe a variavel na url
+    if(!isset($_GET['pesquisar_anuncio'])){
+        header("Location: ../pages/painel.php");
+    } else{
+        //pegar o valor do input buscar
+        $valor_pesquisar = $_GET['pesquisar_anuncio'];
+    }
     
+    //select de todos os anuncios
+    $select_anuncio = "SELECT * FROM criar_anuncio WHERE tipo_anuncio LIKE '%$valor_pesquisar%' OR cidade LIKE '%$valor_pesquisar%' OR bairro LIKE '$valor_pesquisar'";
+    $result_select_pesquisar = mysqli_query($conn, $select_anuncio);
+
+
     //pegar todos os anuncios feitos
-    $sel_anun_database = "SELECT * FROM criar_anuncio";
+    $sel_anun_database = "SELECT * FROM criar_anuncio WHERE tipo_anuncio LIKE '%$valor_pesquisar%' OR cidade LIKE '%$valor_pesquisar%' OR bairro LIKE '$valor_pesquisar'";
     $result_anun = $conn->query($sel_anun_database) or die($conn->error);
 
     ?>
@@ -18,26 +31,23 @@
 <br>
     <div class="container-fluid" >
 
-        <?php if (mysqli_affected_rows($conn) <= 0) { ?>
+        <h1 class="h4 mb-3">Painel</h1>
 
-            <div class="alert">
-                <div class="text-center">
-                    <p class="lead">Hmm, estamos sem anúncios no momento!</p>
-                </div>
+        <!--pesquisar anuncio-->
+        <form method="GET" action="../pages/buscar_anuncio.php">
+            <small>Procure por Cidade, Bairro ou Tipo de Anúncio</small>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control mr-1 border text-capitalize" name="pesquisar_anuncio" id="pesquisar_anuncio" placeholder="Pesquisar Anúncio" value="<?php echo $valor_pesquisar; ?>">
+                <span class="input-group-btn">
+                    <button class="btn btn-search-painel" style="font-weight: 300;" type="submit" value="gerar_pesquisa">Procurar</button>
+                </span>
             </div>
+        </form>
         
-        <?php } else {?>
-            <h1 class="h4 mb-3">Painel</h1>
-            <!--pesquisar anuncio-->
-            <form method="GET" action="../pages/buscar_anuncio.php">
-                <small>Procure por Cidade, Bairro ou Tipo de Anúncio</small>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control mr-1 border" name="pesquisar_anuncio" id="pesquisar_anuncio" placeholder="Pesquisar Anúncio">
-                    <span class="input-group-btn">
-                        <button class="btn btn-search-painel" style="font-weight: 300;" type="submit" value="gerar_pesquisa">Procurar</button>
-                    </span>
-                </div>
-            </form>
+        <div>
+            <a href="../pages/painel.php"><span class="badge badge-warning">Limpar Busca <i class="fas fa-broom"></i></span></a>
+            <a href="#"><span class="badge badge-warning"><?php echo $valor_pesquisar; ?></span></a>
+        </div>
 
             <div class="row">
                 <?php while($dados_anun = $result_anun->fetch_array()){ ?>
@@ -66,7 +76,7 @@
                     </div>
                 <?php }?>
             </div>
-        <?php } ?>
+        
         
    </div>
 </main>

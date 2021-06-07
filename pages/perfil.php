@@ -78,7 +78,7 @@
 
                 <?php
                     //pegar todos os anuncios feitos
-                    $sel_anun_database = "SELECT * FROM criar_anuncio WHERE id_user_anun='$_SESSION[id]' ORDER BY id DESC";
+                    $sel_anun_database = "SELECT * FROM criar_anuncio WHERE id_user_anun='$_SESSION[id]' ORDER BY id DESC LIMIT 3";
                     $result_anun = $conn->query($sel_anun_database) or die($conn->error);
                 ?>
                 
@@ -91,8 +91,6 @@
                             <div class="row">
                                 <div class="col-sm mb-3">
                                     <div class="w-100 card card-meus-anuncios border">
-
-                                    <div class="w-100 card card-meus-anuncios">
 
                                         <div class="card-body">
                                             <span class="float-right">
@@ -127,8 +125,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>        
+                            </div>
                         <?php }?>
+                            <div class="alert text-center">
+                                <p class="lead" style="font-size: 17px;"><a href="../pages/meus_anuncios.php"><strong>Ver Todos</strong></a></p>
+                            </div>
                     <?php } else {?>
                         <div class="alert text-center">
                             <p class="lead" style="font-size: 17px;">Você ainda não possui anúncio! <a href="../pages/criar_anuncio.php"><strong>Criar primeiro anúncio.</strong></a></p>

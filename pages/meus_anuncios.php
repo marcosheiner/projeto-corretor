@@ -29,20 +29,17 @@
         endif; 
             unset($_SESSION['edit_sucesso']);
         ?>
-
-        <h1 class="h4 mb-3">Meus Anúncios</h1>
-        
         
         <?php if (mysqli_affected_rows($conn) <= 0) { ?>
 
             <div class="alert">
                 <div class="text-center">
-                    <p class="lead">Hmm, você não tem anúncios para editar. <a href="../pages/criar_anuncio.php">Criar primeiro anúncio</a></p>
+                    <p class="lead">Você não tem anúncios para editar. <a href="../pages/criar_anuncio.php">Criar primeiro anúncio</a></p>
                 </div>
             </div>
         
         <?php } else {?>
-
+            <h1 class="h4 mb-3">Meus Anúncios</h1>
             <div class="row">
                 <?php while($dados_anun = $result_anun->fetch_array()){ ?>
                     <div class="col-xl-4 col-md-6 mb-4">  
@@ -63,6 +60,8 @@
                                     <a href="../pages/area_anuncio.php?open_anuncio=<?php echo $dados_anun["id"];?>" class="w-100 btn-lg btn btn-card mb-2">Detalhes</a>
                                     <a href="../pages/edit_anuncio.php?open_editar_anuncio=<?php echo $dados_anun['id']; ?>" class="w-100 btn-lg btn btn-editar mb-2 border">Editar</a>
                                     <a href="../pages/area_anuncio.php?open_anuncio=<?php echo $dados_anun["id"];?>" class="w-100 btn-lg btn btn-deletar mb-2 border">Deletar</a>
+
+                                    <small>Anúnciado em <?php echo date("d/m/Y", strtotime($dados_anun["data_cadastro"])); ?></small>
                                 </div>
                             </div> 
                         </div>

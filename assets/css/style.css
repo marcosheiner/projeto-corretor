@@ -388,6 +388,16 @@ label{
     place-items: center;
 }
 
+.btn-search-painel{
+    background-color: #18181b;
+    color: white;
+    border-radius: 10px;
+}
+.btn-search-painel:hover{
+    background-color: #0e0e10;
+    color: whitesmoke;
+}
+
 /*cadastrar usuario*/
 .btn-cadastrar{
     background-color: #0e0e10;
